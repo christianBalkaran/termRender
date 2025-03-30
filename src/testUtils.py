@@ -1,34 +1,3 @@
-def runTest(
-        testFunc,
-        testInput,
-        testOutput
-        ) -> bool:
-
-    if testFunc(testOutput) != testOutput:
-        return False
-    else:
-        return True
-
-def indexTest(
-        testName,
-        testFunc,
-        testInput,
-        testOutput,
-        testsIndex,
-        passedIndex
-        ) -> list[list, list]:
-
-    testPass = runTest(
-            testFunc,
-            testInput,
-            testOutput)
-    
-    testsIndex.append(testName)
-    if testPass:
-        passedIndex.append(testName)
-
-    return [testsIndex, passedIndex]
-
 def checkTests(
     testData: list[list[str, str, any, any, list, list]]
     ) -> list[list, list]:
